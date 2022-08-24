@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbalacatumba</title>
+    <link rel="stylesheet" href="tumba.css">
+    <style>
+
+body {
+    font-family: Helvetica, Arial;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+header {
+    letter-spacing: 1vw;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 2em
+}
+
+main {
+    text-align: center;
+    font-size: calc(1vw + 0.9em);
+    width: 60%;
+    position: relative;
+    left: 20%;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.8em;
+}
+
+footer {
+    text-align: center;
+    font-size: calc(1vw + 0.6em);
+    width: 30%;
+    position: relative;
+    left: 30%;
+    margin: 5%;
+}
+
+img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 20%;
+}
+
+@media (orientation: portrait) {
+    img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 40%;
+}
+}
+
+#res1, #res2 {
+    font-size: calc(1vw + 1em);
+    letter-spacing: 3px;
+}
+
+#ver {
+    margin-top: 1em;
+    width: calc(1vw + 5em);
+    height: calc(1vw + 2.5em);
+    border: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    border-radius: 20px;
+}
+
+#hora {
+    width: 20%;
+    font-size: calc(1vw + 0.7em);
+    text-align: center;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #d3d3d3;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tumbalacatumba</h1>
+    </header>
+    <main>
+        <div id="quest">
+            <p>Que horas o relógio está batendo agora?</p>
+        </div>
+        <div id="form">
+            <input type="number" id="hora" maxlength="1" max="24"> horas <br>
+            <input type="button" id="ver" value="GO" onclick="tumba() ">
+        </div>
+    </main>
+    <section>
+        <div id="res1">
+            
+        </div>
+        <div>
+            <img id="image">
+        </div>
+        <div id="res2" > 
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; RafaSilva</p>
+    </footer>
+    <script>
+        function tumba() {
+    var hora = window.document.querySelector("input#hora")
+    var hrFinal = Number(hora.value)
+    var ver = window.document.querySelector("input#ver")
+    var res1 = window.document.querySelector("div#res1")
+    var res2 = window.document.querySelector("div#res2")
+    var img = window.document.querySelector("img#image")
+
+
+    if (hrFinal == 1 || hrFinal == 13) {
+        res1.innerHTML = `Quando o relógio bate à uma`
+        res2.innerHTML = `Todas as caveiras saem da tumba`
+        img.src = "https://live.staticflickr.com/65535/52102663617_5a8c6cf876_m.jpg"
+
+    } else if (hrFinal == 2 || hrFinal == 14) {
+        res1.innerHTML = `Quando o relógio bate às duas`
+        res2.innerHTML = `Todas as caveiras pintam as unhas`
+        img.src = "https://live.staticflickr.com/65535/52103688976_ed93112e2a_m.jpg"
+    } else if (hrFinal == 3 || hrFinal == 15) {
+        res1.innerHTML = `Quando o relógio bate às três`
+        res2.innerHTML = `Todas as caveiras imitam chinês`
+        img.src = "https://live.staticflickr.com/65535/52103722613_f2451c4cdf_m.jpg"
+    } else if (hrFinal == 4 || hrFinal == 16) {
+        res1.innerHTML = `Quando o relógio bate às quatro`
+        res2.innerHTML = `Todas as caveiras tiram retrato`
+        img.src = "https://live.staticflickr.com/65535/52103940534_35471e7490_m.jpg"
+    } else if (hrFinal == 5 || hrFinal == 17) {
+        res1.innerHTML = `Quando o relógio bate às cinco`
+        res2.innerHTML = `Todas as caveiras apertam o cinto`
+        img.src = "https://live.staticflickr.com/65535/52103940569_edaeecc7af_m.jpg"
+    } else if (hrFinal == 6 || hrFinal == 18) {
+        res1.innerHTML = `Quando o relógio bate às seis`
+        res2.innerHTML = `Todas as caveiras jogam xadrez`
+        img.src = "https://live.staticflickr.com/65535/52103940639_29a580d390_m.jpg"
+    } else if (hrFinal == 7 || hrFinal == 19) {
+        res1.innerHTML = `Quando o relógio bate às sete`
+        res2.innerHTML = `Todas as caveiras jogam basquete`
+        img.src = "https://live.staticflickr.com/65535/52103940619_df412e3c17_m.jpg"
+    } else if (hrFinal == 8 || hrFinal == 20) {
+        res1.innerHTML = `Quando o relógio bate às oito`
+        res2.innerHTML = `Todas as caveiras comem biscoito`
+        img.src = "https://live.staticflickr.com/65535/52103722653_bbaba9733a_m.jpg"
+    } else if (hrFinal == 9 || hrFinal == 21) {
+        res1.innerHTML = `Quando o relógio bate às nove`
+        res2.innerHTML = `Todas as caveiras se sacodem`
+        img.src = "https://live.staticflickr.com/65535/52103688986_dcc3ffeb89_m.jpg"
+    } else if (hrFinal == 10 || hrFinal == 22) {
+        res1.innerHTML = `Quando o relógio bate às dez`
+        res2.innerHTML = `Todas as caveiras comem pastéis`
+        img.src = "https://live.staticflickr.com/65535/52104197740_de89c1f0b0_m.jpg"
+    } else if (hrFinal == 11 || hrFinal == 23) {
+        res1.innerHTML = `Quando o relógio bate às onze`
+        res2.innerHTML = `Todas as caveiras sobem no bonde`
+        img.src = "https://live.staticflickr.com/65535/52103940584_43ac0442a3_m.jpg"
+    } else if (hrFinal == 12 || hrFinal == 24) {
+        res1.innerHTML = `Quando o relógio bate às doze`
+        res2.innerHTML = `Todas as caveiras fazem pose`
+        img.src = "https://live.staticflickr.com/65535/52103722578_c42fd29eec_m.jpg"
+    } else {
+        res1.innerHTML = `O relógio não está batendo nesse horário`
+        res2.innerHTML = ``
+        img.src = "https://live.staticflickr.com/65535/52104197715_b3c8d263e1_m.jpg"
+    }
+}
+
+    </script>
+</body>
+</html>
